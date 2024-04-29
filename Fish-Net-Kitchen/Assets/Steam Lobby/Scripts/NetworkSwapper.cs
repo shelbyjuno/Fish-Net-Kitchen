@@ -4,7 +4,6 @@ using FishNet.Transporting.Multipass;
 using FishNet.Transporting.Tugboat;
 using UnityEngine;
 
-[ExecuteAlways]
 public class NetworkSwapper : MonoBehaviour
 {
     enum NetworkType { Steam, Tugboat }
@@ -23,12 +22,10 @@ public class NetworkSwapper : MonoBehaviour
         if (networkType == NetworkType.Steam)
         {
             mp.SetClientTransport<FishySteamworks.FishySteamworks>();
-            // transportManager.Transport = fishySteamworks;
         }
         else
         {
             mp.SetClientTransport<Tugboat>();
-            // transportManager.Transport = tugboat;
         }
     }
     
