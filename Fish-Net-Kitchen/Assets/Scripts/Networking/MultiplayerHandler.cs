@@ -5,6 +5,7 @@ using UnityEngine;
 using Unity.Multiplayer.Playmode;
 using System.Linq;
 using FishNet.Transporting.Multipass;
+using FishNet.Transporting.Tugboat;
 
 
 public class MultiplayerHandler : MonoBehaviour
@@ -27,12 +28,14 @@ public class MultiplayerHandler : MonoBehaviour
 
         if (tags.Contains("Host") && autoHost)
         {
+            multipass.SetClientTransport<Tugboat>();
             multipass.StartConnection(true);
             multipass.StartConnection(false);
         }
 
         if (tags.Contains("Client") && autoClient)
         {
+            multipass.SetClientTransport<Tugboat>();
             multipass.StartConnection(false);
         }
     }
