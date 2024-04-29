@@ -73,3 +73,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Fish-Net-Kitchen/.vscode/settings.json
 Fish-Net-Kitchen/.vsconfig
+
+# Ignore steam_appid.txt
+steam_appid.txt
